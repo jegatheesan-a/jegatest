@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <head>
   <meta charset="utf-8">
   <title>Welcome Page</title>
@@ -7,5 +8,26 @@
 <body>
   <h1>Welcome to Our Website!</h1>
   <p>We’re glad you’re here. Explore and enjoy your experience.</p>
+
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+                embeddedservice_bootstrap.init(
+                    '00DgK0000029wEv',
+                    'AFChatChannel',
+                    'https://orgfarm-95a7ed3916-dev-ed.develop.my.site.com/ESWAFChatChannel1756621487413',
+                    {
+                        scrt2URL: 'https://orgfarm-95a7ed3916-dev-ed.develop.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://orgfarm-95a7ed3916-dev-ed.develop.my.site.com/ESWAFChatChannel1756621487413/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </body>
 </html>
